@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    int i,j,n,k;
+    printf("enter number of lines :");
+    scanf("%d",&n);
+    int nsp=1;
+    int nst=n-1;
+    for(i=1;i<=n;i++){
+        if(i==1){
+            for(j=1;j<=2*n-1;j++) printf("*");
+        }
+        else{
+            for(j=1;j<=nst;j++) printf("*");
+            for(k=1;k<=nsp;k++) printf(" ");
+            for(j=1;j<=nst;j++) printf("*");
+            nsp+=2;
+            nst--;
+        }
+        printf("\n");
+    }
+    return 0;
+}
